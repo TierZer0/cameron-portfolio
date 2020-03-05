@@ -1,0 +1,231 @@
+$TextOnLight: #424242;
+$TextOnDark: #CECECE;
+$Black: #212121;
+$White: #FAFAFA;
+
+
+
+
+.view {
+    height: 100vh;
+    width: 100vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transition: all 0.5s;
+
+    .background {
+    }
+}
+
+.navbar {
+    //height: 50px;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 200px 10px 200px;       
+    display: flex;
+    transition: all 0.5s;
+    z-index: 10;
+
+    .mobile-nav {
+        display: none;
+        transition: all 0.5s;
+    }
+
+    .mobile-nav-items {
+        z-index: 20;
+        transition: all 0.5s;
+        position: fixed;
+        top: -100vh;
+        left: 0;
+        right: 0;
+        height: 100vh;
+    }
+
+    .title {
+        font-weight: 300;
+        font-size: 30px;
+    }
+
+    .nav-items {
+        display: flex;
+        position: fixed;
+        right: 250px;
+        padding-top: 12px;
+
+        .item {
+            margin: 0px 10px;
+            font-size: 18px;
+            transition: all 0.5s;
+            font-weight: 300;
+            cursor: pointer;
+        }
+
+
+
+        .material-icons {
+            font-size: 25px;
+            margin-left: 20px;
+            text-decoration: none;
+            cursor: pointer;
+            user-select: none;
+        }
+    }
+}
+
+.view.light {
+    background-color: $White;
+
+    .navbar {
+        background-color: $White;
+        color: $TextOnLight;
+
+        .item:hover {
+            transition: all 0.5s;
+            border-bottom: 1px solid $TextOnLight;
+        }
+    }
+}
+
+.view.dark {
+    background-color: $Black;
+
+    .navbar {
+        background-color: $Black;
+        color: $TextOnDark;
+
+        .item:hover {
+            transition: all 0.5s;
+            border-bottom: 1px solid $TextOnDark;
+        }
+    }
+}
+
+.view.colorful {
+    background-color: $White;
+
+    .navbar {
+        background-color: $White;
+        color: $TextOnLight;
+
+        .item:hover {
+            transition: all 0.5s;
+            border-bottom: 1px solid $TextOnLight;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar {
+        padding: 10px;
+
+        .nav-items {
+            display: none;
+        }
+
+        .mobile-nav {
+            display: block;
+            position: fixed;
+            right: 25px;
+            top: 15px;
+
+            .material-icons {
+                font-size: 35px;
+                user-select: none;
+                cursor: pointer;
+            }
+        }
+
+        .mobile-nav-items {
+            text-align: center;
+            .items {
+                margin-top: 30%;
+                .mobile-item {
+                    margin: 15px auto;
+                    cursor: pointer;
+                    font-size: 25px;
+                    user-select: none;
+                    font-weight: 300;
+                    color: $TextOnLight;
+                }
+            }
+        }
+
+        .mobile-nav-items.active {
+            margin-top: 0px;
+            top: 0;
+            height: 100vh;
+            text-align: center;
+
+            .items {
+                margin-top: 30%;
+
+                .mobile-item {
+                    margin: 15px auto;
+                    cursor: pointer;
+                    font-size: 25px;
+                    user-select: none;
+                    font-weight: 300;
+                    transition: all 0.5s;
+                    color: $TextOnLight;
+                }
+
+                .material-icons {
+                    font-size: 40px;
+                    cursor: pointer;
+                }
+            }
+            
+        }
+    }
+
+    .view.light {
+        background-color: $White;
+
+        .navbar {
+            background-color: $White;
+            color: $TextOnLight;
+
+            .mobile-nav-items {
+                background-color: $TextOnDark;
+
+                .material-icons {
+                    color: $TextOnLight;
+                }
+            }
+        }
+    }
+
+    .view.dark {
+        background-color: $Black;
+
+        .navbar {
+            background-color: $Black;
+            color: $TextOnDark;
+
+            .mobile-nav-items {
+                background-color: $TextOnLight;
+                color: $TextOnDark;
+
+                .mobile-item {
+                    color: $TextOnDark;
+                }
+
+                .material-icons {
+                    color: $TextOnDark;
+                }
+            }
+        }
+    }
+
+    .view.colorful {
+        background-color: $White;
+
+        .navbar {
+            background-color: $White;
+            color: $TextOnLight;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+
+<div class="view" [ngClass]="{'light' : theme == 'light', 'dark': theme == 'dark', 'colorful' : theme == 'colorful'}">
+    <div class="background"></div>
+    <div class="navbar">
+        <div class="title">
+            {{ title }}
+        </div>
+        <div class='nav-items'>
+            <div class="item">
+                About
+            </div>
+            <div class="item">
+                Experience
+            </div>
+            <div class="item">
+                Projects
+            </div>
+            <div class="item">
+                Designs
+            </div>
+            <div class="item">
+                Resume
+            </div>
+            <i class="material-icons" (click)="changeTheme()">{{ currentTheme }}</i>
+        </div>
+        <div class="mobile-nav">
+            <i class="material-icons" (click)="mobileNav()">sort</i>
+        </div>
+        <div class="mobile-nav-items" [ngClass]="{'active' : navActive == true}">
+            <div class="mobile-nav">
+                <i class="material-icons" (click)="mobileNav()">sort</i>
+            </div>
+
+            <div class="items">
+                <div class="mobile-item">
+                    About
+                </div>
+                <div class="mobile-item">
+                    Experience
+                </div>
+                <div class="mobile-item">
+                    Projects
+                </div>
+                <div class="mobile-item">
+                    Designs
+                </div>
+                <div class="mobile-item">
+                    Resume
+                </div>
+                <i class="material-icons" (click)="changeTheme()">{{ currentTheme }}</i>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class='content'>
+
+    </div>
+</div>
