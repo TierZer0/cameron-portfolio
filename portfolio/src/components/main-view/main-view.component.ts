@@ -1,7 +1,8 @@
-import { Component, OnInit, OnDestroy, } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild, ElementRef, } from '@angular/core';
 import {
 
 } from '@fortawesome/free-regular-svg-icons';
+import { HostListener } from '@angular/core';
 
 @Component({
     selector: 's-main-view',
@@ -19,6 +20,13 @@ export class MainViewComponent implements OnInit, OnDestroy {
 
     ) { 
         this.theme = 'light';
+    }
+
+    scrolling = false;
+    @ViewChild('content') element : ElementRef;
+    @HostListener('window:scroll', ['$event']) 
+    scrollHandler(event) {
+      console.log(this.element.nativeElement.offsetTop);
     }
 
     themes = ['brightness_7', 'brightness_3', 'brightness_5'];
