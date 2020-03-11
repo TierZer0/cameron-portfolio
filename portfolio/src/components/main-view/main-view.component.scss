@@ -2,27 +2,23 @@ $TextOnLight: #424242;
 $TextOnDark: #CECECE;
 $Black: #212121;
 $White: #FAFAFA;
+$Color-Primary: #43dde6;
+$Color-Secondary: #364f6b;
+$Color-Accent: #fc5185;
+$Color-text: #E0E5EC; //#dee1ec; //#f0f0f0;
 
 
 .view {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
     transition: all 0.5s;
+}
 
-    .background {
-
-        position: fixed;
-        
-        .rectangle {
-            margin-right: -100px;
-            height: 100px;
-            width: 2000px;
-            border: 2px solid $TextOnLight;
-            transform: rotate(35deg);
-        }
-    }
+p {
+    margin: 0;
+    padding: 0;
 }
 
 .navbar {
@@ -32,10 +28,11 @@ $White: #FAFAFA;
     top: 0;
     left: 0;
     right: 0;
-    padding: 10px 200px 10px 200px;       
+    padding: 10px 150px 10px 150px;       
     display: flex;
     transition: all 0.5s;
     z-index: 10;
+    transition: all 0.5s;
 
     .mobile-nav {
         display: none;
@@ -55,13 +52,15 @@ $White: #FAFAFA;
     .title {
         font-weight: 300;
         font-size: 30px;
+        user-select: none;
+        cursor: pointer;
     }
 
     .nav-items {
         display: flex;
         position: fixed;
-        right: 250px;
-        padding-top: 12px;
+        right: 150px;
+        padding-top: 10px;
 
         .item {
             margin: 0px 10px;
@@ -69,6 +68,7 @@ $White: #FAFAFA;
             transition: all 0.5s;
             font-weight: 300;
             cursor: pointer;
+            transition: all 0.5s;
         }
 
         .material-icons {
@@ -82,17 +82,156 @@ $White: #FAFAFA;
 }
 
 .content {
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
-    margin-top: 75px;
-    height: 2000px;
+    padding-top: 75px;
+    width: 100vw;
+
+    .home {
+        user-select: none;
+        padding: 0px 150px;
+        transition: all 0.5s;
+
+        .title {
+            margin-top: 12%;
+            font-size: 60px;
+            font-weight: 400;
+        }
+
+        .sub-title {
+            font-size: 35px;
+            font-weight: 300;
+            margin-top: 10px;
+            margin-left: 5px;
+        }
+        
+        .position {
+            background-color: $Black;
+            color: $TextOnDark;
+            padding: 15px;
+            font-size: 25px;
+            margin-top: 25px;
+            transition: all 0.5s;
+        }
+
+        #position-1 {
+            width: 350px;
+        }
+
+        #position-2 {
+            width: 178px;
+        }
+
+        .actions {
+            display: flex;
+            margin-top: 30px;
+            width: 300px;
+
+            .action {
+                transition: all 0.5s;
+                background-color: $TextOnLight;
+                color: $White;
+                padding: 10px;
+                text-align: center;
+                width: 100px;
+                font-size: 17px;
+                margin-right: 20px;
+                cursor: pointer;
+                box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            }
+
+            
+
+            .action-alt {
+                transition: all 0.5s;
+                border: 1px solid $TextOnLight;
+                color: $TextOnLight;
+                padding: 10px;
+                text-align: center;
+                width: 100px;
+                font-size: 17px;
+                margin-left: 20px;
+                cursor: pointer;
+                //box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            }
+
+            
+        }
+    }
+    .watermark {
+        margin-top: -20px;
+        //margin-right: -10px;
+        font-size: 45em;
+        // float: right;
+        color: $TextOnDark;
+        transition: all 0.5s;
+        user-select: none;
+    }
+
+    .about {
+        transition: all 0.5s;
+        padding: 0px 150px;
+        .title {
+            transition: all 0.5s;
+            font-size: 45px;
+        }
+
+        .info {
+            display: flex;
+            padding: 30px 0px;
+            transition: all 0.5s;
+            .bio {
+                width: 40%;
+
+                .desc {
+                    font-size: 25px;
+                    font-weight: 300;
+                }
+
+                .edu {
+                    margin-top: 35px;
+
+                    .school {
+                        font-size: 25px;
+                        margin-bottom: 5px;
+                    }
+
+                    .degree {
+                        font-size: 25px;
+                        font-weight: 300;
+                    }
+                }
+            }
+
+            .skill-cards {
+                margin-left: 20%;
+                width: 40%;
+
+                .skill-card {
+                    padding: 20px 20px;
+                    display: flex;
+                    transition: all 0.5s;
+                    .skill-title {
+                        font-size: 25px;
+                    }
+
+                    .skills {
+                        margin-left: 30%;
+                        width: auto;
+                        font-weight: 300;
+                        font-size: 19px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .view.light {
     background-color: $White;
 
     .navbar {
-        background-color: transparent;
+        background-color: $White;
         color: $TextOnLight;
 
 
@@ -102,8 +241,61 @@ $White: #FAFAFA;
         }
     }
 
+    .navbar:hover {
+        transition: all 0.5s;
+        box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 
+                    0 3px 3px -2px rgba(0, 0, 0, .2), 
+                    0 1px 8px 0 rgba(0, 0, 0, .12);
+    }
+
     .content {
-        
+        .home {
+            .title {
+                color: $TextOnLight;
+            }
+    
+            .sub-title { 
+                color: $TextOnLight;
+            }
+    
+            .position {
+                background-color: $Black;
+                color: $TextOnDark;
+            }
+
+            .actions {
+                .action:hover {
+                    transition: all 0.5s;
+                    background-color: $Black;
+                }
+    
+                .action-alt:hover {
+                    transition: all 0.5s;
+                    background-color: $TextOnLight;
+                    color: $TextOnDark;
+                }
+            }
+        }
+
+        .about {
+            .title {
+                color: $TextOnLight;
+            }
+
+            .info {
+                .bio {
+                    color: $TextOnLight;
+                }
+
+                .skill-cards {
+                    color: $TextOnLight;
+
+                    .skill-card {
+                        background-color: $TextOnDark;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -111,7 +303,7 @@ $White: #FAFAFA;
     background-color: $Black;
 
     .navbar {
-        background-color: transparent;
+        background-color: $Black;
         color: $TextOnDark;
 
         .item:hover {
@@ -119,23 +311,295 @@ $White: #FAFAFA;
             border-bottom: 1px solid $TextOnDark;
         }
     }
-}
+    
+    .navbar:hover {
+        transition: all 0.5s;
+        background-color: $TextOnLight;
+        box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 
+                    0 3px 3px -2px rgba(0, 0, 0, .2), 
+                    0 1px 8px 0 rgba(0, 0, 0, .12);
+    }
+    
+    .content {
+        .home {
+            .title {
+                color: $TextOnDark;
+            }
+    
+            .sub-title {
+                color: $TextOnDark;
+            }
+    
+            .position {
+                background-color: $White;
+                color: $TextOnLight;
+            }
 
-.view.colorful {
-    background-color: $White;
+            .actions {
+                .action {
+                    background-color: $TextOnDark;
+                    color: $TextOnLight;
+                }
 
-    .navbar {
-        background-color: transparent;
-        color: $TextOnLight;
+                .action-alt {
+                    border: 1px solid $TextOnDark;
+                    color: $TextOnDark;
+                }
 
-        .item:hover {
+                .action:hover {
+                    transition: all 0.5s;
+                    background-color: $White;
+                }
+    
+                .action-alt:hover {
+                    transition: all 0.5s;
+                    background-color: $TextOnDark;
+                    color: $TextOnLight;
+                }
+
+            }
+        }
+        .watermark {
+            color: $TextOnLight;
             transition: all 0.5s;
-            border-bottom: 1px solid $TextOnLight;
+        }
+
+        .about {
+            .title {
+                color: $TextOnDark;
+            }
+
+            .info {
+                .bio {
+                    color: $TextOnDark;
+                }
+
+                .skill-cards {
+                    color: $TextOnDark;
+
+                    .skill-card {
+                        background-color: $TextOnLight;
+                    }
+                }
+            }
         }
     }
 }
 
+.view.colorful {
+    background-color: $Color-text;
+
+    .navbar {
+        background-color: $Color-text;
+        color: $TextOnLight;
+        box-shadow: 9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px  rgba(255,255,255, 0.5);
+
+        .title {
+            color: $Color-Primary;
+            font-weight: 400;
+        }
+
+        .item:hover {
+            transition: all 0.5s;
+            border-bottom: 1px solid $Color-Accent;
+            color: $Color-Accent;
+        }
+
+        .material-icons {
+            color: $Color-Accent;
+        }
+    }
+
+    .navbar:hover {
+        background-color: $Color-Secondary;
+        box-shadow: 9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px  rgba(255,255,255, 0.65);
+
+        .item {
+            color: $Color-text;
+        }
+
+        .item:hover {
+            transition: all 0.5s;
+            border-bottom: 1px solid $Color-Accent;
+            color: $Color-Accent;
+        }
+    }
+
+    .content {
+        .home {
+            .title {
+                color: $Color-Primary;
+            }
+
+            .sub-title {
+                color: $Color-Accent;
+            }
+
+            .position {
+                background-color: $Color-text;
+                color: $Color-Secondary;
+                border-radius: 10px;
+                box-shadow: 9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px  rgba(255,255,255, 0.5);
+            }
+
+            .actions {
+                .action {
+                    background-color: $Color-Secondary;
+                    color: $Color-text;
+                    border-radius: 10px;
+                    box-shadow: 9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px  rgba(255,255,255, 0.5);
+                }
+
+                .action-alt {
+                    background-color: $Color-text;
+                    border: 1px solid $Color-Secondary; 
+                    color: $Color-Secondary;
+                    border-radius: 10px;
+                }
+
+                .action:hover {
+                    transition: all 0.5s;
+                    background-color: $Color-Accent;
+                    color: $Color-text;
+                }
+    
+                .action-alt:hover {
+                    transition: all 0.5s;
+                    background-color: $Color-Secondary;
+                    color: $Color-text;
+                }
+            }
+        }
+        .watermark {
+            color: $Color-Secondary;
+            opacity: .05;
+        }
+
+        .about {
+            .title {
+                color: $Color-Primary;
+            }
+
+            .info {
+                .bio {
+                    color: $Color-Secondary;
+                }
+
+                .skill-cards {
+                    color: $Color-Secondary;
+                    
+                    .skill-card {
+                        background-color: $Color-text;
+                        border-radius: 10px;
+                        box-shadow: 9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px  rgba(255,255,255, 0.5);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1920px) {
+    .content {
+        .home {
+            .title {
+                font-size: 50px;
+                margin-top: 6%;
+            }
+
+            .sub-title {
+                font-size: 35px;
+            }
+
+            .position {
+                font-size: 20px;
+            }
+
+            #position-1 {
+                width: 280px;
+            }
+    
+            #position-2 {
+                width: 142px;
+            }
+
+            .watermark {
+                font-size: 35em;
+            }
+        }
+
+
+        .about {
+            .title {
+                font-size: 40px;
+            }
+
+            .info {
+                padding: 30px 0px;
+                .bio {
+                    width: 40%;
+                    .desc {
+                        font-size: 18px;
+                        font-weight: 300;
+                        
+                    }
+
+                    .edu {
+                        margin-top: 25px;
+                        
+                        .school {
+                            font-size: 20px;
+                            margin-bottom: 5px;
+                        }
+
+                        .degree {
+                            font-size: 20px;
+                            font-weight: 300;
+                        }
+                    }
+                }
+
+                .skill-cards {
+                    margin-left: 20%;
+                    width: 40%;
+
+                    .skill-card {
+                        padding: 20px 20px;
+                        
+                        display: flex;
+
+                        .skill-title {
+                            font-size: 25px;
+                        }
+
+                        .skills {
+                            margin-left: 30%;
+                            width: auto;
+                            font-weight: 300;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
 @media only screen and (max-width: 600px) {
+    ::-webkit-scrollbar-thumb {
+        border-radius: 0px;
+        width: 4px;
+        color: #424224;
+        background-color: #424242;
+    }
+
+    ::-webkit-scrollbar {
+        width: 4px;
+        border-radius: 0px;
+        background: transparent;
+    }
+
     .navbar {
         padding: 10px;
 
@@ -153,6 +617,7 @@ $White: #FAFAFA;
                 font-size: 35px;
                 user-select: none;
                 cursor: pointer;
+                transform: scaleX(-1);
             }
         }
 
@@ -199,6 +664,87 @@ $White: #FAFAFA;
         }
     }
 
+    .content {
+        
+        .home {
+            text-align: center;
+            padding: 0px 10px;
+            margin-top: 20%;
+
+            .title {
+                font-size: 35px;
+            }
+
+            .sub-title {
+                font-size: 30px;
+            }
+
+            .position {
+                font-size: 18px;
+                margin: 15px auto;
+            }
+
+            #position-1 {
+                width: 252px
+            }
+
+            #position-2 {
+                width: 128px;
+            }
+
+            .actions {
+                margin: 30px auto;
+            }
+
+            .watermark {
+                margin-top: 45%;
+                margin-left: -40px;
+                font-size: 9em;
+            }
+        }
+
+        .about {
+            padding: 0px 10px;
+            text-align: center;
+
+            .title {
+                font-size: 30px;
+            }
+
+            .info {
+                display: block;
+                width: 100%;
+
+                .bio {
+                    width: 100%;
+                }
+                
+                .skill-cards {
+                    margin: 20px auto;
+                    width: 100%;
+
+                    .skill-card {
+                        width: 80%;
+                        margin: 10px auto;
+                        display: block;
+                        padding: 10px 10px;
+
+                        .skill-title {
+                            font-size: 25px;
+                        }
+
+                        .skills {
+                            margin: 10px auto;
+                        }
+
+                    }
+                }
+            }
+        }
+        
+
+    }
+
     .view.light {
         background-color: $White;
 
@@ -239,11 +785,27 @@ $White: #FAFAFA;
     }
 
     .view.colorful {
-        background-color: $White;
+        background-color: $Color-text;
 
         .navbar {
-            background-color: $White;
+            background-color: $Color-text;
             color: $TextOnLight;
+
+            .mobile-nav-items {
+                background-color: $Color-Secondary;
+                color: $Color-Accent;
+
+                .mobile-item {
+                    color: $Color-text;
+                }
+
+                .material-icons {
+                    color: $Color-Accent;
+                }
+                
+            }
         }
     }
+
+
 }

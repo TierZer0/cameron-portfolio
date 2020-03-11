@@ -11,12 +11,14 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 5px;
+    width: 8px;
     border-radius: 0px;
     background: transparent;
 }
 
-::-webkit-scroolbar-thumb {
+::-webkit-scrollbar-thumb {
     border-radius: 0px;
+    width: 8px;
+    color: #424224;
     background-color: #424242;
 }
