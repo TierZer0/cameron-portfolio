@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "cmstark920"
+  },
+  "targets": {
+    "cmstark920": {
+      "hosting": {
+        "portfolio": [
+          "cmstark920"
+        ]
+      }
+    }
   }
 }

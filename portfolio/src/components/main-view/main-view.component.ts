@@ -6,10 +6,7 @@ import {
     ElementRef, 
     AfterViewInit
 } from '@angular/core';
-import {
-
-} from '@fortawesome/free-regular-svg-icons';
-import { HostListener } from '@angular/core';
+import { DataService } from '../../services/data.service';
 
 @Component({
     selector: 's-main-view',
@@ -20,12 +17,13 @@ export class MainViewComponent implements OnInit, OnDestroy {
 
     theme;
     //title = "</CameronStark>"
-    title = "</CMS>"
-    
+    //title = "</CMS>"
+    title = "<Cameron></Stark>"
+
     navActive = false;
     position;
     constructor(
-
+        private dataService : DataService
     ) { 
         //this.theme = 'colorful';
         this.theme = 'light';
@@ -35,21 +33,6 @@ export class MainViewComponent implements OnInit, OnDestroy {
        
     }
 
-
-
-    scrolling = false;
-    @ViewChild('element') contentElement : ElementRef;
-    // @HostListener('window:scroll', ['$event']) 
-    //     handleScroll() {
-        
-    //         const windowScroll = window.pageYOffset;
-    //         console.log(this.position);
-    //     }
-    scroll() {
-        this.position = this.contentElement.nativeElement.offsetTop;
-        console.log(this.position, window.pageYOffset);
-    }
-    
 
     themes = ['brightness_7', 'brightness_3', 'brightness_5'];
     themeCount = 0;
@@ -80,7 +63,34 @@ export class MainViewComponent implements OnInit, OnDestroy {
         this.navActive = !this.navActive;
     }
 
+    frontEndLangs : Array<any>;
+    backEndLangs : Array<any>;
+    frameworks : Array<any>;
+    tools : Array<any>;
     ngOnInit() {
+        this.dataService.getFrontEndLanguages.subscribe(
+            response => {
+                this.frontEndLangs = response;
+            }
+        )
+
+        this.dataService.getBackEndLanguages.subscribe(
+            response => {
+                this.backEndLangs = response;
+            }
+        )
+
+        this.dataService.getFrameworks.subscribe(
+            response => {
+                this.frameworks = response;
+            }
+        )
+
+        this.dataService.getTools.subscribe(
+            response => {
+                this.tools = response;
+            }
+        )
     }
 
     ngOnDestroy() {

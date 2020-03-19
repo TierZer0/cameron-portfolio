@@ -1,5 +1,5 @@
 <div class="view" [ngClass]="{'light' : theme == 'light', 'dark': theme == 'dark', 'colorful' : theme == 'colorful'}">
-    <div class="navbar" [ngClass]="{'active' : scrolling == true}">
+    <div class="navbar">
         <div class="title">
             {{ title }}
         </div>
@@ -104,12 +104,51 @@
                             Front-End
                         </div>
                         <div class="skills">
-                            <p>HTML</p>
-                            <p>CSS / SCSS / SASS</p>
-                            <p>RShiny</p>
+                            <p *ngFor="let item of frontEndLangs">
+                                {{ item.lang }}
+                            </p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="skill-card">
+                        <div class="skill-title">
+                            Back-End
+                        </div>
+                        <div class="skills">
+                            <p *ngFor="let item of backEndLangs">
+                                {{ item.lang }}
+                            </p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="skill-card">
+                        <div class="skill-title">
+                            Frameworks
+                        </div>
+                        <div class='skills'>
+                            <p *ngFor="let item of frameworks">
+                                {{ item.lang }}
+                            </p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="skill-card">
+                        <div class="skill-title">
+                            Tools
+                        </div>
+                        <div class="skills">
+                            <p *ngFor="let item of tools">
+                                {{ item.lang }}
+                            </p>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="experience" #experience>
+            <div class="title">
+                EXPERIENCE
             </div>
         </div>
     </div>

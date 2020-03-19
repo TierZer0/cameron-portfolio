@@ -211,8 +211,10 @@ p {
                     padding: 20px 20px;
                     display: flex;
                     transition: all 0.5s;
+
                     .skill-title {
                         font-size: 25px;
+                        width: 125px;
                     }
 
                     .skills {
@@ -224,6 +226,11 @@ p {
                 }
             }
         }
+    }
+
+    .experience {
+        transition: all 0.5s;
+        padding: 0px 150px;
     }
 }
 
@@ -582,6 +589,12 @@ p {
                 }
             }
         }
+
+        .experience {
+            .title {
+                font-size: 40px;
+            }
+        }
         
     }
 }
@@ -731,6 +744,7 @@ p {
 
                         .skill-title {
                             font-size: 25px;
+                            margin: auto;
                         }
 
                         .skills {
@@ -742,6 +756,10 @@ p {
             }
         }
         
+        .experience {
+            padding: 0px 10px;
+            text-align: center;
+        }
 
     }
 
