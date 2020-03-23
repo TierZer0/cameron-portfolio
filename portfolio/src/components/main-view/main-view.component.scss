@@ -6,6 +6,7 @@ $Color-Primary: #43dde6;
 $Color-Secondary: #364f6b;
 $Color-Accent: #fc5185;
 $Color-text: #E0E5EC; //#dee1ec; //#f0f0f0;
+$shadow: 9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px  rgba(255,255,255, 0.5);
 
 
 .view {
@@ -231,6 +232,60 @@ p {
     .experience {
         transition: all 0.5s;
         padding: 0px 150px;
+
+        .title {
+            transition: all 0.5s;
+            font-size: 40px;
+        }
+
+        .info {
+            padding: 30px 0px;
+
+            .experience-cards {
+                width: 100%;
+
+                .experience-card {
+                    padding: 20px 20px;
+                    display: flex;
+                    margin-bottom: 20px;
+                    transition: all 0.5s;
+
+                    .position {
+                        display: block;
+                        width: 30%;
+
+                        .company {
+                            font-size: 30px;
+                            padding: 0;
+                        }
+
+                        .job-title {
+                            font-size: 20px;
+                        }
+
+                        .period {
+                            font-size: 18px;
+                        }
+                    }
+
+                    .details {
+                        margin-left: 20%;
+                        width: 50%;
+                        display: block;
+
+                        .description {
+                            text-align: right;
+                            font-size: 16px;
+                            margin-bottom: 15px;
+                        }
+
+                        .tech {
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -298,6 +353,23 @@ p {
                     color: $TextOnLight;
 
                     .skill-card {
+                        background-color: $TextOnDark;
+                    }
+                }
+            }
+        }
+
+        .experience {
+
+            .title {
+                color: $TextOnLight;
+            }
+
+            .info {
+                .experience-cards {
+                    color: $TextOnLight;
+
+                    .experience-card {
                         background-color: $TextOnDark;
                     }
                 }
@@ -390,6 +462,22 @@ p {
                 }
             }
         }
+
+        .experience {
+            .title {
+                color: $TextOnDark;
+            }
+            
+            .info {
+                .experience-cards {
+                    color: $TextOnDark;
+
+                    .experience-card {
+                        background-color: $TextOnLight;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -446,7 +534,7 @@ p {
                 background-color: $Color-text;
                 color: $Color-Secondary;
                 border-radius: 10px;
-                box-shadow: 9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px  rgba(255,255,255, 0.5);
+                box-shadow: $shadow
             }
 
             .actions {
@@ -454,7 +542,7 @@ p {
                     background-color: $Color-Secondary;
                     color: $Color-text;
                     border-radius: 10px;
-                    box-shadow: 9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px  rgba(255,255,255, 0.5);
+                    box-shadow: $shadow;
                 }
 
                 .action-alt {
@@ -498,11 +586,31 @@ p {
                     .skill-card {
                         background-color: $Color-text;
                         border-radius: 10px;
-                        box-shadow: 9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px  rgba(255,255,255, 0.5);
+                        box-shadow: $shadow;
                     }
                 }
             }
         }
+
+        .experience {
+            .title {
+                color: $Color-Primary;
+            }
+
+            .info {
+                .experience-cards {
+                    color: $Color-Secondary;
+
+                    .experience-card {
+                        background-color: $Color-text;
+                        border-radius: 10px;
+                        box-shadow: $shadow;
+                    }
+                }
+            }
+        }
+
+
     }
 }
 
@@ -593,6 +701,56 @@ p {
         .experience {
             .title {
                 font-size: 40px;
+            }
+
+            .info {
+                padding: 30px 0px;
+
+                .experience-cards {
+                    width: 100%;
+
+                    .experience-card {
+                        padding: 20px 20px;
+                        display: flex;
+                        margin-bottom: 20px;
+
+                        .position {
+                            display: block;
+                            width: 30%;
+
+                            .company {
+                                font-size: 30px;
+                                padding: 0;
+                            }
+
+                            .job-title {
+                                font-size: 20px;
+                                padding: 0;
+                            }
+
+                            .period {
+                                font-size: 18px;
+                            }
+                        } 
+
+                        .details {
+                            margin-left: 20%;
+                            width: 50%;
+                            display: block;
+
+                            .description {
+                                text-align: right;
+                                font-size: 16px;
+                                margin-bottom: 15px;
+                            }
+
+                            .tech {
+                                text-align: right;
+                            }
+                        }
+
+                    }
+                }
             }
         }
         
@@ -759,6 +917,59 @@ p {
         .experience {
             padding: 0px 10px;
             text-align: center;
+
+            .title {
+                font-size: 30px;
+            }
+
+            .info {
+                display: block;
+                width: 100%;
+
+                .experience-cards {
+                    margin: 20px auto;
+                    width: 100%;
+
+                    .experience-card {
+                        width: 80%;
+                        margin: 10px auto;
+                        display: block;
+                        padding: 10px 10px;
+
+                        .position {
+                            text-align: center;
+                            width: 100%;
+
+                            .company {
+
+                            }
+
+                            .job-title {
+
+                            }
+
+                            .period {
+
+                            }
+                        }       
+                        
+                        .details {
+                            margin: 0;
+                            margin-top: 20px;
+                            width: 100%;
+                            text-align: center;
+
+                            .description {
+                                text-align: center;
+                            }
+
+                            .tech {
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
         }
 
     }

@@ -150,6 +150,31 @@
             <div class="title">
                 EXPERIENCE
             </div>
+            <div class="info">
+                <div class="experience-cards">
+                    <div class="experience-card" *ngFor="let item of experiences">
+                        <div class="position">
+                            <div class="company">
+                                {{ item.company }}
+                            </div>
+                            <div class="job-title">
+                                {{ item.title }}
+                            </div>
+                            <div class="period">
+                                {{ item.period }}
+                            </div>
+                        </div>
+                        <div class="details">
+                            <div class="description">
+                                {{ item.description }}
+                            </div>
+                            <div class="tech">
+                                {{ item.tech }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

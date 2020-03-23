@@ -17,8 +17,8 @@ export class MainViewComponent implements OnInit, OnDestroy {
 
     theme;
     //title = "</CameronStark>"
-    //title = "</CMS>"
-    title = "<Cameron></Stark>"
+    title = "</CMS>"
+    //title = "<Cameron></Stark>"
 
     navActive = false;
     position;
@@ -67,6 +67,7 @@ export class MainViewComponent implements OnInit, OnDestroy {
     backEndLangs : Array<any>;
     frameworks : Array<any>;
     tools : Array<any>;
+    experiences : Array<any>;
     ngOnInit() {
         this.dataService.getFrontEndLanguages.subscribe(
             response => {
@@ -91,6 +92,14 @@ export class MainViewComponent implements OnInit, OnDestroy {
                 this.tools = response;
             }
         )
+
+        this.dataService.getExperience.subscribe(
+            response => {
+                this.experiences = response;
+            }
+        )
+
+
     }
 
     ngOnDestroy() {
