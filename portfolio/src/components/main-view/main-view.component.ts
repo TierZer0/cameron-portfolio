@@ -21,7 +21,6 @@ export class MainViewComponent implements OnInit, OnDestroy {
     //title = "<Cameron></Stark>"
 
     navActive = false;
-    position;
     constructor(
         private dataService : DataService
     ) { 
