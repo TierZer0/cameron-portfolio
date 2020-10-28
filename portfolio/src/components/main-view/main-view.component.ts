@@ -21,6 +21,7 @@ export class MainViewComponent implements OnInit, OnDestroy {
     //title = "<Cameron></Stark>"
 
     navActive = false;
+    sidebarActive = false;
     constructor(
         private dataService : DataService
     ) { 
@@ -60,6 +61,10 @@ export class MainViewComponent implements OnInit, OnDestroy {
 
     mobileNav() {
         this.navActive = !this.navActive;
+    }
+
+    toggleSidebar() {
+        this.sidebarActive = !this.sidebarActive;
     }
 
     frontEndLangs : Array<any>;

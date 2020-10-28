@@ -2,11 +2,12 @@ $TextOnLight: #424242;
 $TextOnDark: #CECECE;
 $Black: #212121;
 $White: #FAFAFA;
-$Color-Primary: #43dde6;
+$Color-Primary: #0ca4ad;
 $Color-Secondary: #364f6b;
 $Color-Accent: #fc5185;
 $Color-text: #E0E5EC; //#dee1ec; //#f0f0f0;
 $shadow: 9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px  rgba(255,255,255, 0.5);
+$shadow-light: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 
 
 .view {
@@ -87,6 +88,7 @@ p {
     overflow-x: hidden;
     padding-top: 75px;
     width: 100vw;
+    background-color: transparent;
 
     .home {
         user-select: none;
@@ -95,7 +97,8 @@ p {
 
         .title {
             margin-top: 12%;
-            font-size: 60px;
+            margin-left: 3px;
+            font-size: 70px;
             font-weight: 400;
         }
 
@@ -107,25 +110,28 @@ p {
         }
         
         .position {
-            background-color: $Black;
-            color: $TextOnDark;
+            //background-color: $Black;
+            //color: $TextOnDark;
             padding: 15px;
-            font-size: 25px;
+            margin-left: -10px;
+            font-size: 28px;
+            font-weight: 200;
             margin-top: 25px;
             transition: all 0.5s;
         }
 
         #position-1 {
-            width: 350px;
+            width: 380px;
         }
 
         #position-2 {
-            width: 178px;
+            width: 200px;
         }
 
         .actions {
             display: flex;
             margin-top: 30px;
+            margin-left: 7px;
             width: 300px;
 
             .action {
@@ -159,17 +165,9 @@ p {
             
         }
     }
-    .watermark {
-        margin-top: -20px;
-        //margin-right: -10px;
-        font-size: 45em;
-        // float: right;
-        color: $TextOnDark;
-        transition: all 0.5s;
-        user-select: none;
-    }
-
+    
     .about {
+        margin-top: 300px;
         transition: all 0.5s;
         padding: 0px 150px;
         .title {
@@ -210,6 +208,7 @@ p {
 
                 .skill-card {
                     padding: 20px 20px;
+                    margin-bottom: 10px;
                     display: flex;
                     transition: all 0.5s;
 
@@ -247,7 +246,7 @@ p {
                 .experience-card {
                     padding: 20px 20px;
                     display: flex;
-                    margin-bottom: 30px;
+                    margin-bottom: 40px;
                     transition: all 0.5s;
 
                     .position {
@@ -287,6 +286,44 @@ p {
             }
         }
     }
+
+    .projects {
+        transition: all 0.5s;
+        padding: 0px 150px;
+        
+        .title {
+            transition: all 0.5s;
+            font-size: 40px;
+        }
+
+        .info {
+            padding: 30px 0px;
+            width: 100%;
+
+            .project-cards {
+                width: 100%;
+                display: grid;
+                overflow: hidden;
+                white-space: nowrap;
+                padding: 25px;
+                grid-template-columns: repeat(6, 1fr);
+
+                .project-card {
+                    height: 300px;
+                    width: 225px;
+                    margin-right: 25px;
+                    margin-bottom: 25px;
+                    background-color: $White;
+                    transition: all 0.5s;
+                    cursor: pointer;
+                }
+
+                .project-card:hover {
+                    box-shadow: $shadow-light;
+                }
+            }
+        }
+    }
 }
 
 .view.light {
@@ -321,8 +358,8 @@ p {
             }
     
             .position {
-                background-color: $Black;
-                color: $TextOnDark;
+                //background-color: $Black;
+                color: $TextOnLight;
             }
 
             .actions {
@@ -353,7 +390,7 @@ p {
                     color: $TextOnLight;
 
                     .skill-card {
-                        background-color: $TextOnDark;
+                        background-color: $White;
                     }
                 }
             }
@@ -370,7 +407,8 @@ p {
                     color: $TextOnLight;
 
                     .experience-card {
-                        background-color: $TextOnDark;
+                        margin-left: -19px;
+                        background-color: $White;
                     }
                 }
             }
@@ -410,8 +448,8 @@ p {
             }
     
             .position {
-                background-color: $White;
-                color: $TextOnLight;
+                //background-color: $White;
+                color: $TextOnDark;
             }
 
             .actions {
@@ -438,10 +476,10 @@ p {
 
             }
         }
-        .watermark {
-            color: $TextOnLight;
-            transition: all 0.5s;
-        }
+        // .watermark {
+        //     color: $TextOnLight;
+        //     transition: all 0.5s;
+        // }
 
         .about {
             .title {
@@ -457,7 +495,7 @@ p {
                     color: $TextOnDark;
 
                     .skill-card {
-                        background-color: $TextOnLight;
+                        background-color: $Black;
                     }
                 }
             }
@@ -473,7 +511,8 @@ p {
                     color: $TextOnDark;
 
                     .experience-card {
-                        background-color: $TextOnLight;
+                        margin-left: -19px;
+                        background-color: $Black;
                     }
                 }
             }
@@ -533,6 +572,8 @@ p {
             .position {
                 background-color: $Color-text;
                 color: $Color-Secondary;
+                padding: 15px;
+                margin-left: 0px;
                 border-radius: 10px;
                 box-shadow: $shadow
             }
@@ -627,15 +668,15 @@ p {
             }
 
             .position {
-                font-size: 20px;
+                font-size: 24px;
             }
 
             #position-1 {
-                width: 280px;
+                width: 330px;
             }
     
             #position-2 {
-                width: 142px;
+                width: 172px;
             }
 
             .watermark {
@@ -712,7 +753,7 @@ p {
                     .experience-card {
                         padding: 20px 20px;
                         display: flex;
-                        margin-bottom: 20px;
+                        margin-bottom: 40px;
 
                         .position {
                             display: block;
