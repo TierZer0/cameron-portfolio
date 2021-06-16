@@ -1,0 +1,122 @@
+<div class="view">
+    <div class="hero">
+        <div class="title">
+            <p>Designing and Developing To Improve User Productivity</p>
+        </div>
+        <div class="info">
+            <mat-grid-list cols="3" rowHeight="400px" gutterSize="50">
+                <mat-grid-tile
+                    class="info-card"
+                    [colspan]="1"
+                    [rowspan]="1">
+                    <div class="content">
+                        <mat-icon class="info-icon">desktop_windows</mat-icon>
+                        <div class="info-card-content">
+                            <p class="header">Web Development</p>
+                            <p class="body">Creating Full-Stack Angular Websites. Using Firebase as the backend and lifecycle support of the application</p>
+                        </div>
+                        <div class="info-actions">
+                            <button class="info-button" mat-raised-button>Learn More</button>
+                        </div>
+                    </div>
+                </mat-grid-tile>
+                <mat-grid-tile
+                    class="info-card"
+                    [colspan]="1"
+                    [rowspan]="1">
+                    <div class="content">
+                        <mat-icon class="info-icon">smartphone</mat-icon>
+                        <div class="info-card-content">
+                            <p class="header">Mobile Development</p>
+                            <p class="body">Creating Full-Stack Flutter Multi-Platform Applications. Using Firebase as the backend and lifecycle support of the application</p>
+                        </div>
+                        <div class="info-actions">
+                            <button class="info-button" mat-raised-button>Learn More</button>
+                        </div>
+                    </div>
+                </mat-grid-tile>
+                <mat-grid-tile
+                    class="info-card"
+                    [colspan]="1"
+                    [rowspan]="1">
+                    <div class="content">
+                        <mat-icon class='info-icon'>architecture</mat-icon>
+                        <div class="info-card-content">
+                            <p class="header">User Interface Design</p>
+                            <p class="body">Designing applications for projects and User Interface/User Experience studies and redesigns of existing applications</p>
+                        </div>
+                        <div class="info-actions">
+                            <button class="info-button" mat-raised-button>Learn More</button>
+                        </div>
+                    </div>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </div>
+
+        <div class="section">
+            <div class='section-header'>
+                <p class='header'>Web Development</p>
+            </div>
+            <div class="section-content">
+                <mat-grid-list cols="6" rowHeight="150px" gutterSize="30">
+                    <mat-grid-tile
+                        class="tile"
+                        *ngFor="let tile of webDevStack"
+                        [colspan]="1"
+                        [rowspan]="1">
+                        <div class="tile-content">
+                            <i [ngClass]="tile.icon"></i>
+                            <br>
+                            <br>
+                            <span>{{tile.label}}</span>
+                        </div>
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-header">
+                <p class="header">Mobile Development</p>
+            </div>
+            <div class="section-content">
+                <mat-grid-list cols="6" rowHeight="150px" gutterSize="30">
+                    <mat-grid-tile
+                        class="tile"
+                        *ngFor="let tile of mobileDevStack"
+                        [colspan]="1"
+                        [rowspan]="1">
+                        <div class="tile-content">
+                            <i [ngClass]="tile.icon"></i>
+                            <br>
+                            <br>
+                            <span>{{tile.label}}</span>
+                        </div>
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <p class="header">User Interface Design</p>
+            </div>
+            <div class="section-content">
+                <mat-grid-list cols="6" rowHeight="150px" gutterSize="30">
+                    <mat-grid-tile
+                        class="tile"
+                        *ngFor="let tile of designStack"
+                        [colspan]="1"
+                        [rowspan]="1">
+                        <div class="tile-content">
+                            <i [ngClass]="tile.icon"></i>
+                            <br>
+                            <br>
+                            <span>{{tile.label}}</span>
+                        </div>
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </div>
+        </div>
+    </div>
+</div>
